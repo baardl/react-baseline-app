@@ -11,6 +11,12 @@ export const updateTodo = (id,text) => ({
     text
 })
 
+export const editTodo = (id,text) => ({
+    type: 'EDIT_TODO',
+    id,
+    text
+})
+
 export const setVisibilityFilter = (filter) => ({
   type: 'SET_VISIBILITY_FILTER',
   filter

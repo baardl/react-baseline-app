@@ -7,6 +7,9 @@ import reducer from "./reducers";
 
 const store = createStore(reducer)
 
+let unsubscribe = store.subscribe(() =>
+    console.log(store.getState())
+)
 render(
   <Provider store={store}>
     <App />

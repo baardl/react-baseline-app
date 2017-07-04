@@ -9,6 +9,13 @@ const todos = (state = [], action) => {
           completed: false
         }
       ]
+      case 'UPDATE_TODO':
+        console.log("Update todo. Action," ,action );
+          return state.map(todo =>
+              (todo.id === action.id)
+                  ? {...todo, text: action.text}
+                  : todo
+          )
     case 'TOGGLE_TODO':
       return state.map(todo =>
         (todo.id === action.id) 
